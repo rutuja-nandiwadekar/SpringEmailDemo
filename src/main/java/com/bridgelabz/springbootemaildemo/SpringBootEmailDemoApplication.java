@@ -20,9 +20,16 @@ public class SpringBootEmailDemoApplication {
 
 	@EventListener(ApplicationReadyEvent.class)
 	public void triggerMail() throws MessagingException {
-		senderService.sendSimpleEmail("nandiwadekarrutuja@gmail.com",
-				"subject",
-				"Hey this is rutuja nandiwadekar");
+
+//		senderService.sendSimpleEmail("nandiwadekarrutuja@gmail.com",
+//				"subject",
+//				"Hey this is rutuja nandiwadekar");
+
+		senderService.sendEmailWithAttachment(
+				"karthikmc007@gmail.com",
+				"Email with Attachment",
+				"This email has attachment",
+				"C:\\Users\\Hp\\Downloads\\hey img.jpg");
 
 	}
 
